@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="tests" name="Failed suite [BankSuite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    <listener class-name="listener.Listener"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="manager (failed)">
+    <parameter name="browser" value="edge"/>
+    <classes>
+      <class name="testcases.addCustomerTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="SetUp"/>
+          <include name="screenshotValidationAmeo"/>
+        </methods>
+      </class> <!-- testcases.addCustomerTest -->
+    </classes>
+  </test> <!-- manager (failed) -->
+</suite> <!-- Failed suite [BankSuite] -->
